@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested If_4 Maximum</title>
+</head>
+<body>
+    <script>
+        let a=20;
+        let b=30;
+        let c=80;
+        let d=90;
+
+        if(a>b){
+            if(a>c){
+                if(a>d){
+                    document.write("A is Maximum");
+                }else{
+                    document.write("D is Maximum");
+                }
+            }else{
+                if(c>d){
+                    document.write("C is Maximum");
+                }else{
+                    document.write("D is Maximum");
+                }
+            }
+        }else{
+            if(b>c){
+                if(b>d){
+                    document.write("B is Maximum");
+                }else{
+                    document.write("D is Maximum");
+                }
+            }else{
+                if(c>d){
+                    document.write("C is Maximum");
+                }else{
+                    document.write("D is Maximum")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

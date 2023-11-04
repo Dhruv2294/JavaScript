@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary_Increment</title>
+</head>
+<body>
+    <script>
+        let sal=98765;
+        if(sal>=1000 && sal<5000){
+            sal+=1000;
+        }else if(sal>=5000 && sal<10000){
+            sal+=2000;
+        }else if(sal>=10000 && sal<20000){
+            sal+=3000;
+        }else if(sal>=20000 && sal<50000){
+            sal+=4000;
+        }else{
+            document.write('No Increment')
+        }
+        document.write('<br>Final Salary....'+sal)
+    </script>
+</body>
+</html>

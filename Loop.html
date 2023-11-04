@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <script>
+        document.write("Loop are of 3 types:-");
+        document.write("Do_while - exit controlled,for,while - entry controlled");
+
+        let a=2;
+        while(a<=20){
+            if(a%2==0){
+                document.write("<br> a is "+a+"<hr><hr>");
+            }
+            a++;
+            //a+=2;
+        }
+
+
+        let b=100;
+        do{
+            document.write("<br>b is "+b+"<hr>")
+            b+=4;
+        }while(b<=120);  
+
+
+        for(let j=55;j<=65;j++){
+            document.write("j is "+j+"<br><hr><hr>")
+        }
+    </script>
+</body>
+</html>

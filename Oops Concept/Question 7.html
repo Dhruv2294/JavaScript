@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+</head>
+<body>
+    <script>
+        // 7) Create an object from function
+        //-->vehicle function.
+        //-->property - type,tire
+        //-->print all details
+        //create object like car,bus,truck
+
+        let vehicle = function( type , tyre){
+            this.type = type;
+            this.tyre = tyre;
+            this.talltyre = function(){
+                document.write(this.type + " = " + this.tyre +" tyres<br> ");
+            };
+        };
+        var car = new vehicle ("car",4);
+        var truck = new vehicle ("truck",75);
+        var bus = new vehicle ("bus",8);
+
+        car.talltyre();
+        bus.talltyre();
+        truck.talltyre();
+
+    </script>
+</body>
+</html>

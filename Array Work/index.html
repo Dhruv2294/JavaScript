@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Array Work</title>
+</head>
+
+<body>
+
+     <script>
+          // (1)  find max from array
+
+          let a = [23, 33, 45, 43, 12];
+          let max = a[0];
+          a.forEach((i) => {
+               if (i > max) {
+                    max = i;
+               }
+          })
+          document.write('Maximum Number is...' + max + "<br><hr><hr><br>");
+
+
+          // (2)find even/odd from array
+
+          let b = [1, 3, 5, 7, 9, 22];
+
+          for (let i = 0; i < b.length; i++) {
+               if (b[i] % 2 === 0) {
+                    document.write("<br>" + b[i] + " is even......" + "<br>");
+               } else {
+                    document.write("<br>" + b[i] + " is odd" + "<br><hr>");
+               }
+          }
+
+
+          // (3) double*2,triple*3 value from array
+
+          let c = [23, 33, 45, 43, 12];
+
+          let dell_ary = c.map((i) => {
+               return i * 2;
+          });
+
+          document.write("<br>Double value " + dell_ary + "<br>");
+
+          let dell_ar = c.map((t) => {
+               return t * 3;
+          });
+
+          document.write("<br>Triple value " + dell_ar + "<br><hr>");
+
+
+          //(4) find element 45 from array a
+
+
+          let d = [23, 33, 45, 43, 12];
+
+          let find = d.filter((y) => y == 45);
+
+          document.write("<br>" + find + "<br><hr>");
+
+
+          // (5) count the value from array
+
+
+          let pets = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
+
+          let ans = pets.reduce((obj, p) => {
+               if (!obj[p]) {
+                    obj[p] = 1;
+               } else {
+                    obj[p]++;
+               }
+               return obj
+          }, {})
+          console.log(ans);
+
+
+          //(6) Use  findIndex ,every & some function to check all no is even or not
+
+          // findindex
+          const ages = [3, 10, 128, 20];
+
+          function checkage(age) {
+               return age > 18;
+          }
+          document.write('<hr><br>Find index......' + ages.findIndex(checkage) + "<br><hr>");
+
+          // every
+          const ag = [18, 28, 19, 20];
+          function checkag(ag) {
+               return ag > 18;
+          }
+          document.write('<br>Every is......' + ag.every(checkag) + "<br><hr>");
+
+          // some
+          const abc = [15, 38, 15, 10];
+          function dell(abc) {
+               return abc > 18;
+          }
+          document.write('<br>Some is......' + abc.some(dell)+ "<br><hr>");
+
+
+
+     </script>
+</body>
+
+</html>

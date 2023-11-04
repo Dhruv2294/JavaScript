@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+<body>
+    <script>
+        // 4) Create student object & print details.
+        //-->name,age,marks
+        //-->create function to find average of marks
+        //-->Print function to display student all details.
+
+        let student={
+            Name : "Dhruv",
+            Age : 18,
+            Marks : [90,85,75]
+        }
+
+        function findavg(Marks){
+            let sum = 0;
+            for (let i= 0; i<Marks.length; i++){
+                sum += Marks[i];
+            }
+            return sum / Marks.length;
+        }
+        function Studentdetails(student){
+            document.write("<br> Name : "+student.Name);
+            document.write("<br> Age : "+student.Age);
+            document.write("<br> Marks : "+student.Marks);
+            document.write("<br> Avg Marks : "+findavg(student.Marks));
+        }
+
+        Studentdetails(student);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else-If</title>
+</head>
+<body>
+    <script>
+        
+        let no= 0;
+        if(no > 0){
+            document.write("It is +ve.......");
+        }
+        else if(no == 0){
+            document.write("It is zero......");
+        }
+        else{
+            document.write(" <br>It is -ve......")
+        }
+
+
+        let ap=123;
+        let sp=456;
+        
+        if(ap>sp){
+            document.write("<br>SORRy!! You are in LOSS...");
+        }
+        else if(ap<sp){
+            document.write("<br>WOOh!! YOu are in PROFIT......");
+        }
+        else{
+            document.write("<br>YOu Dont have PROFIT or LOSS")
+        }
+
+
+        let m1=33
+        let m2=33
+        let m3=33
+        let m4=33
+        let m5=33
+
+        let total=m1+m2+m3+m4+m5;
+        
+        document.write("<br> total is "+total);
+        let per=total/5;
+        document.write("<br> Percentage is "+per);
+
+        if(per>=80){
+            document.write("<br>Grade A+");
+        }
+        else if(per>=70 && per<80){
+            document.write("<br>Grade A");
+        }
+        else if(per>=60 && per<70){
+            document.write("<br>Grade B");
+        }
+        else if(per>=40 && per<60)
+        {
+            document.write("<br>Grade C");
+        }
+        else if(per>=33 && per<40){
+            document.write("<br>Grade D")
+        }
+        else{
+            document.write("<br>Better Luck Next Time")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> calculation </title>
+</head>
+
+
+<style>
+     #btn1,
+     #btn2,
+     #btn3,
+     #btn4 {
+          background-color: gray;
+          height: 60px;
+          width: 170px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          margin: 20px;
+          text-align: center;
+     }
+</style>
+
+<body>
+     <button name="btn1" id="btn1">ADDITION</button>
+     <button name="btn2" id="btn2">MULTIPLY</button>
+     <button name="btn3" id="btn3">SUBTRACTION</button>
+     <button name="btn4" id="btn4">DIVISION</button>
+
+
+
+     <script>
+          let a = 20;
+          let b = 50;
+          document.getElementById("btn1").onclick = function () {
+               document.write("<b>Addition is..... </b>" + (a + b));
+          }
+
+
+          document.getElementById("btn2").onclick = function () {
+               document.write("<b>Multiply is..... </b>" + (a * b));
+          }
+
+          document.getElementById("btn3").onclick = function () {
+               document.write("<b>Subtraction is..... </b>" + (a - b));
+          }
+
+
+          document.getElementById("btn4").onclick = function () {
+               document.write("<b>Division is..... </b>" + (a / b));
+          }
+
+     </script>
+</body>
+
+</html>

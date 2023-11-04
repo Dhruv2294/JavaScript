@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        let a="Welcome to rnw welcome";
+        document.write("lenght is "+a.length+"<br>");
+        let b=a.slice(3);
+        document.write("slice - start "+b+"<br>");
+        let c=a.slice(-3);
+        document.write("slice - start "+c+"<br>");
+        let d=a.slice(3,10);
+        document.write("slice - start "+d+"<br>");
+        let e=a.slice(-13,-4);
+        document.write("slice - start "+e+"<br>");
+
+
+        let strr=a.replace(/wel-come/gi,"welcome")
+        document.write("String replace is "+strr)
+    </script>
+</body>
+</html>

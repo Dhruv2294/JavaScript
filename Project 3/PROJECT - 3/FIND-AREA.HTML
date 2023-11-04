@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> Find Area</title>
+</head>
+
+<body>
+     <p id="area"></p>
+     <p id="rect"></p>
+     <p id="circle"></p>
+     <script>
+
+          // Triangle
+
+          function Triangle(l, b, h) {
+               return l * b * h;
+          }
+          document.getElementById("area").innerHTML = "AREA OF TRINGLE  IS..... " + Triangle(510, 80, 80);
+
+          // Rectanlge
+
+          function rectangle() {
+               let l = 45; // l= Length
+               let w = 78; // w= Width
+               return a = l * w;
+          }
+          document.getElementById("rect").innerHTML = "AREA OF RECTANGLE....." + rectangle();
+
+
+
+          // circle
+          function circle() {
+               let pi = 3.14;
+               let r = 78;
+               return pi * (r ** 2);
+          }
+          document.getElementById("circle").innerHTML = "AREA OF CIRCLE IS..." + circle();
+
+
+
+
+     </script>
+</body>
+
+</html>

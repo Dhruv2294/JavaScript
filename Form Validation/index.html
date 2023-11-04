@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>JS Form Validation</title>
+
+</head>
+
+<body>
+     <center>
+          <form action="#" name="userform" onsubmit="return checkvaliddata()">
+               <label for="">Name:- </label>
+               <input type="text" name="uname" id="uname">
+               <p id="errname"></p>
+               <br>
+               <label for="">Number:- </label>
+               <input type="number" name="no" id="no">
+               <p id="errno" name="errno"></p><br>
+
+               <label for="">Email:- </label>
+               <input type="text" name="email" id="email">
+               <p id="erremail" name="erremail"></p><br>
+
+
+               <label for="">Password:- </label>
+               <input type="Password" name="pwd" id="pwd">
+               <p id="errpwd" name="errpwd"></p><br>
+
+               <label for="">Confirm Password:- </label>
+               <input type="Password" name="cpwd" id="cpwd">
+               <p id="errcpwd" name="errcpwd"></p><br>
+
+               <label for="#">Gender:- </label>
+               <input type="radio" name="gender" id="male" value="male">Male
+               <input type="radio" name="gender" id="Female" value="Female">Female
+               <input type="radio" name="gender" id="Other" value="Other">Other
+
+               <p id="errGen"></p>
+
+               <input type="submit" value="Register" name="btn1" class="btn1">
+
+          </form>
+     </center>
+
+     <script>
+          function checkvaliddata() {
+               let Name = document.userform.uname.value
+               let no = document.userform.no.value
+               let email = document.userform.email.value
+               let pwd = document.userform.pwd.value
+               let cpwd = document.userform.cpwd.value
+               let gender = document.userform.gender.value
+               let statu = 0
+
+
+               document.getElementById("errname").innerHTML = ""
+               document.getElementById("errno").innerHTML = ""
+               document.getElementById("erremail").innerHTML = ""
+               document.getElementById("errpwd").innerHTML = ""
+               document.getElementById("errcpwd").innerHTML = ""
+
+               if (Name == "") {
+                    document.getElementById("errname").innerHTML = "Please enter Valid name."
+                    document.getElementById("errname").style.color = "red"
+                    statu = 1
+               }
+               if (no == "") {
+                    document.getElementById("errno").innerHTML = "Invalid number."
+                    document.getElementById("errno").style.color = "red"
+                    statu = 1
+               }
+               if (email == "") {
+                    document.getElementById("erremail").innerHTML = "Invalid mail id."
+                    document.getElementById("erremail").style.color = "red"
+                    statu = 1
+               }
+               if (pwd == "") {
+                    document.getElementById("errpwd").style.color = "red"
+                    document.getElementById("errpwd").innerHTML = "Please enter password."
+                    statu = 1
+               }
+               if (cpwd == "") {
+                    document.getElementById("errcpwd").innerHTML = "Please enter confirm password."
+                    document.getElementById("errcpwd").style.color = "red"
+                    statu = 1
+               }
+               if (pwd != "" && cpwd != "" && pwd != cpwd) {
+                    document.getElementById("errcpwd").innerHTML = "password and confirm password does not match."
+                    document.getElementById("errcpwd").style.color = "red";
+                    statu = 1
+               }
+
+               if (Name != "" && Name.lenghth < 2 || Name.lenghth > 20) {
+                    document.getElementById('errname').innerHTML = 'Name must be 2 or 20 characters.'
+                    document.getElementById("errnam").style.color = "red"
+                    statu = 1
+               }
+
+               let ans = document.querySelectorAll('input[name="gender"]:checked')
+               if (ans.length == 0) {
+                    document.getElementById('errGen').innerHTML = "Please select gender";
+                    document.getElementById('errGen').style.color = 'red';
+                    statu = 1
+
+               }
+               if (statu == 0) {
+                    return true
+               } else {
+                    return false
+               }
+          }
+
+     </script>
+
+</body>
+
+</html>
